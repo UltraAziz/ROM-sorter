@@ -61,3 +61,8 @@ for file in os.listdir ("./"):
  sort_files(".cia", "Nintendo 3DS CIA")
  sort_files(".ngc", "Neo Geo Pocket Color")
  sort_files(".ngp", "Neo Geo Pocket Color")
+ sort_files(".a26", "Atari 2600")
+ sort_files(".a52", "Atari 5200")
+ sort_files(".a72", "Atari 7200")
+ sort_files(".gdi", "Sega Dreamcast")
+
