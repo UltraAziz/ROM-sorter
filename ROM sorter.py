@@ -1,4 +1,4 @@
-import os, pathlib, shutil, time, sys
+import os, pathlib, shutil, time
 from pathlib import Path
 
 directory = False
@@ -59,3 +59,5 @@ for file in os.listdir ("./"):
  sort_files(".dsi", "Nintendo DSiware")
  sort_files(".3ds", "Nintendo 3ds")
  sort_files(".cia", "Nintendo 3DS CIA")
+ sort_files(".ngc", "Neo Geo Pocket Color")
+ sort_files(".ngp", "Neo Geo Pocket Color")
