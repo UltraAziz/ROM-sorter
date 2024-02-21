@@ -3,6 +3,7 @@ from pathlib import Path
 
 directory = False
 text = "Sorting will start in "
+n = 0
 def create_directory(console):
       path = fr'./{console}'
       directory = os.path.isdir(path)
@@ -21,12 +22,7 @@ def sort_files(rom, console):
 print("This script will automatically arange your ROM files into folders for each console.")
 print(".iso files cannot be sorted due to all disc based consoles using them.")
 print(".zip files are assumed to be Arcade archives.") 
-print(text + "5 Seconds", end='\r')
-time.sleep(1)
-print(text + "5 Seconds", end='\r')
-time.sleep(1)
-print(text + "4 Seconds", end='\r')
-time.sleep(1)
+
 print(text + "3 Seconds", end='\r')
 time.sleep(1)
 print(text + "2 Seconds", end='\r')
@@ -65,4 +61,8 @@ for file in os.listdir ("./"):
  sort_files(".a52", "Atari 5200")
  sort_files(".a72", "Atari 7200")
  sort_files(".gdi", "Sega Dreamcast")
+ n += 1
+print(f"Sorted {n} ROMs)
+time.sleep(3)
+ 
 
