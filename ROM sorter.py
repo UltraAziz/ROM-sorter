@@ -30,6 +30,8 @@ time.sleep(1)
 print(text + "1 Seconds", end='\r')
 time.sleep(1)
 
+ti = time.perf_counter()  #initial time to calculate script runtime
+
 
 for file in os.listdir ("./"):
  sort_files(".nes", "NES")
@@ -62,7 +64,9 @@ for file in os.listdir ("./"):
  sort_files(".a72", "Atari 7200")
  sort_files(".gdi", "Sega Dreamcast")
  n += 1
-print(f"Sorted {n} ROMs)
-time.sleep(3)
- 
 
+tf = time.perf_counter() #final time to calculate script runtime
+rt = tf - ti      #total script runtime
+
+print(f"\nSorted {n} Files in {rt} seconds")
+time.sleep(3)
